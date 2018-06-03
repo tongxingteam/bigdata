@@ -16,6 +16,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <jedis.version>2.9.0</jedis.version>
+        <junit.version>4.12</junit.version>
+        <provided.scope>provided</provided.scope>
     </properties>
 
 
@@ -25,6 +27,14 @@
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>${jedis.version}</version>
+        </dependency>
+
+        <!-- junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

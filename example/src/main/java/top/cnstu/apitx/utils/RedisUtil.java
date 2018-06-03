@@ -51,7 +51,7 @@ public class RedisUtil {
     public static synchronized Jedis getJedis() {
         Jedis jedis = null;
         jedis = jedisPool.getResource();
-        jedis.select(1);
+        jedis.select(PropertiesUtil.getPropInteger("redis.index"));
         return jedis;
     }
 

@@ -28,7 +28,7 @@ redis.max_total=1024
 redis.max_idle=200
 redis.max_wait=-1
 redis.test.on.borrow=false
-redis.index=10
+redis.index=2
 
 ```
 

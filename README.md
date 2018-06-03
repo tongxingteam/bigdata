@@ -36,9 +36,9 @@ redis.index=10
  直接用Maven的package命令打包
  
 ### 5.发布
- ```
+```
  nohup java -jar jar包 /dev/null 2>&1 &
- ```
+```
 
 
 ###6. 项目贡献者

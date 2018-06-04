@@ -4,17 +4,17 @@
 可查看《[大数据技术_简介_yore.pdf](./大数据技术_简介_yore.pdf)》文件
 
 ### 2. redis中分页查询
-redis中分页可以使用`list`,list是一个列表，并且时按时间顺序排序插入每行的数据，所以可以行数来进行分页获取。
+redis中分页可以使用`list`,list是一个列表，并且是按照时间顺序排序插入每行的数据，所以可以行数来进行分页获取。
 ```java
 List<String> result = jedisPool.getResource().lrange(key, start, end);
 result/*.stream()*/.forEach(str -> {
     System.out.println(str);
 });
 ```
-但是对也简单的按时间用list是没有问题的，对于复杂的则需要借助`SortedSet`来实现，
+但是对于简单的按时间分页用list是没有问题的，而对于复杂的则需要借助`SortedSet`来实现，
 <br/>
-对于List分页可以参考 [RedisUtil.pageList()](./src/main/java/top/cnstu/apitx/utils/RedisUtil.java)
-对于复杂的分页可参考 [RedisUtil.pageListWithSort()](./src/main/java/top/cnstu/apitx/utils/RedisUtil.java)
+对于List分页可以参考 [RedisUtil.pageList()](./example/src/main/java/top/cnstu/apitx/utils/RedisUtil.java)
+对于复杂的分页可参考 [RedisUtil.pageListWithSort()](./example/src/main/java/top/cnstu/apitx/utils/RedisUtil.java)
 
 
 ### 3. 项目配置信息
